@@ -1,0 +1,66 @@
+# Qt build directories
+build/
+build-*/
+
+# Qt Creator specific files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.pro.user.* 
+*.autosave
+
+# Qt Creator CMake specific
+CMakeLists.txt.user
+
+# Generated Makefiles
+Makefile
+Makefile.Debug
+Makefile.Release
+
+# qmake generated files
+*.moc
+*.obj
+*.o
+*.a
+*.lib
+*.la
+*.lo
+*.rcc
+*.qrc
+*.gch
+*.pch
+
+# Qt generated directories and files
+moc_*/ 
+ui_*/ 
+qrc_*/
+
+# Debugging files
+debug/
+release/
+
+# General system files
+.DS_Store
+Thumbs.db
+*~
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+
+# macOS files
+*.dSYM
+*.app
+
+# Windows files
+*.exe
+*.dll
+*.pdb
+*.ilk
+
+# Linux files
+*.so
+
+# Log files
+*.log
