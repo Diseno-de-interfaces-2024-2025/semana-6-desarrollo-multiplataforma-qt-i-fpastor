@@ -1,3 +1,12 @@
+/*
+  ------------------------------------------------
+  Main.qml
+  Semana 6 - Desarrollo Multiplataforma QT
+
+  Creado por Fernando Pastor en 11/2024
+  ------------------------------------------------
+*/
+
 import QtQuick
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
@@ -51,46 +60,29 @@ Window {
         }
     }
 
-
     StackLayout {
         id: stackLayout
+        anchors.verticalCenter: optionMenu.verticalCenter
         anchors.left: optionMenu.right
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.leftMargin: 0
+        anchors.rightMargin: 0
+        anchors.topMargin: 0
+        anchors.bottomMargin: 0
         Layout.fillHeight: true
         Layout.fillWidth: true
         currentIndex: 0
 
-        Rectangle {
-            id: rectangle1
-            color: "#efefef"
-            anchors.fill: parent
-            Layout.fillHeight: true
-            Layout.fillWidth: true
+        View {
+            id: view1
+            title: "Elementos"
 
-            Heading {
-                id: heading1
-                headingText: "Elementos"
-            }
-
-            GridLayout {
-                id: gridLayout
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.top: heading1.bottom
-                anchors.bottom: parent.bottom
-                anchors.leftMargin: 20
-                anchors.rightMargin: 20
-                anchors.topMargin: 0
-                anchors.bottomMargin: 20
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                columns: 3
-                rowSpacing: 10
-                columnSpacing: 10
-
+            CardGrid {
+                id: cardGrid
+                anchors.top: parent.top
+                anchors.topMargin: 80
                 Card {
                     id: card1
                 }
@@ -121,44 +113,20 @@ Window {
             }
         }
 
-        Rectangle {
-            id: rectangle2
-            color: "#efefef"
-            anchors.fill: parent
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Heading {
-                id: heading2
-                headingText: "Edición"
-            }
+        View {
+            id: view2
+            title: "Edición"
         }
 
-        Rectangle {
-            id: rectangle3
-            color: "#efefef"
-            anchors.fill: parent
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Heading {
-                id: heading3
-                headingText: "Usuarios"
-            }
+        View {
+            id: view3
+            title: "Usuarios"
         }
 
-        Rectangle {
-            id: rectangle4
-            color: "#efefef"
-            anchors.fill: parent
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Heading {
-                id: heading4
-                headingText: "Configuración"
-            }
+        View {
+            id: view4
+            title: "Configuración"
         }
-
     }
 
     RoundButton {

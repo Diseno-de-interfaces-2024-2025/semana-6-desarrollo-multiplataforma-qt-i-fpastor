@@ -21,6 +21,8 @@ qt_add_qml_module(appejercicio1
         QML_FILES Card.qml
         QML_FILES
         QML_FILES Heading.qml
+        QML_FILES View.qml
+        QML_FILES CardGrid.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
